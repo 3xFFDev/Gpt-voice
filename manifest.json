@@ -1,0 +1,38 @@
+{
+  "manifest_version": 3,
+  "name": "Gpt-voice",
+  "author": "mr.3xFF",
+  "version": "1.0.0",
+  "description": "-",
+  "permissions": [
+    "storage",
+    "activeTab",
+    "tabs",
+    "notifications",
+    "webNavigation",
+    "webRequest",
+    "browsingData"
+  ],
+  "icons": {
+    "16": "1.png",
+    "48": "2.png",
+    "128": "3.png"
+  },
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "options_ui": {
+    "page": "options.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://chatgpt.com/*"],
+      "css": ["style.css"],
+      "js": ["script.js"],
+      "run_at": "document_start"
+    }
+  ]
+}

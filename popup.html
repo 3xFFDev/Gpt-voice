@@ -1,0 +1,83 @@
+<!doctype html>
+
+<html xmlns="http://www.w3.org/1999/html" lang="en">
+
+    <head>
+
+        <title>Settings</title>
+
+        <style>
+
+            html, body {
+
+                background-color: #222831;
+            }
+            #container {
+
+                display:            flex;
+                flex-direction:     column;
+                justify-content:    center;
+                align-items:        center;
+                width:              150px;
+                padding:            20px 2px;
+                color:              white;
+            }
+            #container .settings {
+
+                display:            flex;
+                justify-content:    space-between;
+                align-items:        center;
+                width:              100%;
+                padding:            5px 0;
+            }
+            #container .settings label {
+
+                color:              #eeeeee;
+            }
+            #container .settings > select {
+                width:              100%;
+                padding:            10px;
+                border:             none;
+                outline:            none;
+            }
+
+        </style>
+
+        <script src="popup.js"></script>
+
+    </head>
+
+    <body>
+
+        <div id="container">
+
+            <h3>Conversation setup</h3>
+
+            <div class="settings">
+
+                <label>
+                    Gpt<input type="checkbox" id="machine-speech-status">
+                </label>
+
+                <label>
+                    <input type="checkbox" id="human-speech-status">You
+                </label>
+
+            </div>
+
+            <div class="settings">
+
+                <select id="speech-language">
+
+                    <option value="ru-RU">Russian</option>
+                    <option value="en-US">English</option>
+
+                </select>
+
+            </div>
+
+        </div>
+
+    </body>
+</html>
+
